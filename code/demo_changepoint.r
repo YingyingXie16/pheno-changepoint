@@ -115,7 +115,10 @@ for (j in 1:19)
       data=makedf(EVI,doyt)
       seg_fun(data)
     }
-
+   
+  # stop parallel workers
+  stopCluster()
+  
   # assign variable names
   colnames(seg)=varnames
 
